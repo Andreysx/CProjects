@@ -23,13 +23,17 @@ Console.WriteLine($"Случайное число из отрезка 10 - 99-> 
 
 int maxDigit = MaxDigit(number);// метож MaxDigit возвращает значение в переменную maxDigit (исходные данные=> numder)
 Console.WriteLine($"Наибольшая цифра числа -> {maxDigit}");
+int maxDigit1 = MaxDigit(51);// метож MaxDigit возвращает значение в переменную maxDigit (исходные данные=> numder) 
+Console.WriteLine($"Наибольшая цифра числа -> {maxDigit1}");//Показали что метод при его вызове  будет рабоать в любой строчке кода
 
-int MaxDigit(int number)
+int MaxDigit(int num)// к примеру num=number или num = 51 или num = 89 и тд в зависимости от заданного значения
 {
 
-    int firstDigit = number / 10; //7
-    int secondDigit = number % 10;//8
+    int firstDigit = num / 10; //7
+    int secondDigit = num % 10;//8
     int result = firstDigit > secondDigit ? firstDigit : secondDigit;
     return result;
 
 }
+int maxDigit2 = MaxDigit(89);// метож MaxDigit возвращает значение в переменную maxDigit (исходные данные=> numder)
+Console.WriteLine($"Наибольшая цифра числа -> {maxDigit2}");//Показали что метод при его вызове  будет рабоать в любой строчке кода
