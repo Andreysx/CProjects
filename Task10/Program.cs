@@ -12,11 +12,20 @@
 //int First(int num)
 //{
 //    int num1 = number / 100;
- //   int num3 = number % 10;
- //   int result = num1 * 10 + num3;
- //   return result;
+//   int num3 = number % 10;
+//   int result = num1 * 10 + num3;
+//   return result;
 //}
 
+int number = new Random().Next(100, 1000);
+Console.WriteLine($"Случайное число из отрезка 100 - 1000-> {number}");
 
-
-
+int res = RemoveSecondDigit(number);
+Console.WriteLine($"рузультат -> {res}");
+int RemoveSecondDigit(int num)
+{
+    int num1 = number / 100;
+    int num3 = number % 10;
+    int result = num1 * 10 + num3;
+    return result;
+}
