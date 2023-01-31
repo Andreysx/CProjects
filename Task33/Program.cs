@@ -20,3 +20,5 @@ void PrintArray(double[] arr)
     }
     Console.Write("]");
 }
+double[] array = CreateArrayRndInt(5, 1, 99);
+PrintArray(array);
