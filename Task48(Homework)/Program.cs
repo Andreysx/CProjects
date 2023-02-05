@@ -7,37 +7,37 @@
 // 8 7,8 -7,1 9
 
 
-double[,] array2D = CreateMatrixRndDouble(3, 4, -10, 10);
-PrintMatrix(array2D);
-
-double[,] CreateMatrixRndDouble(int rows, int columns, int min, int max)
+void PrintArrayDouble(double[,] matrix)
 {
-    double[,] matrix = new double[rows, columns];
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write("||");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5} ");
+            else Console.Write($"{matrix[i, j],5} ");
+        }
+        Console.WriteLine("||");
+    }
+
+}
+
+double[,] SetAnArrayRndDouble(int rows, int columns, int min, int max)//метод задает массив размером m*n заполненный случайными вещественными числами
+{
+    double[,] array = new double[rows, columns];
     Random rnd = new Random();
 
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            double res = rnd.NextDouble() * (max - min) + min;
-            matrix[i, j] = Math.Round(res, 1, MidpointRounding.ToZero);
+            double result = rnd.NextDouble() * (max - min) + min;
+            array[i, j] = Math.Round(result, 1, MidpointRounding.ToZero);//округление и стратегия округления
         }
 
     }
-    return matrix;
+    return array;// возвращаем массив заполненный случайными вещественными числами
 }
 
-void PrintMatrix(double[,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        Console.Write("|");
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4} ");// 4--- это форматирование для вывода массива
-            else Console.Write($"{matrix[i, j],4} ");
-        }
-        Console.WriteLine("|");
-    }
-
-}
+double[,] array = SetAnArrayRndDouble(3, 4, -10, 10);
+PrintArrayDouble(array);
