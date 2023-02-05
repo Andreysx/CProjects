@@ -73,3 +73,9 @@ PrintMatrix(array2D);
 double[] array1D = AverageColum(array2D);
 Console.Write("Среднее арифметическое в каждом столбце: ");
 PrintArray(array1D);
+
+// PrintMatrix(CreateMatrixRndInt(4, 5, -10, 10));
+// AverageColum(CreateMatrixRndInt(4, 5, -10, 10));
+// Console.Write("Среднее арифметическое в каждом столбце: ");
+// PrintArray(AverageColum(CreateMatrixRndInt(4, 5, -10, 10)));
+// Тут что-то не получилось, выводит не среднее арифметическое.
