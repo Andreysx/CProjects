@@ -39,5 +39,8 @@ double[,] SetAnArrayRndDouble(int rows, int columns, int min, int max)//мето
     return array;// возвращаем массив заполненный случайными вещественными числами
 }
 
-double[,] array = SetAnArrayRndDouble(3, 4, -10, 10);
-PrintArrayDouble(array);
+PrintArrayDouble(
+    SetAnArrayRndDouble(4, 4, -10, 10)
+    );//вы это нам вроде еще не показывали, увидел в лекции, обычный вариант ниже
+      // double[,] array = SetAnArrayRndDouble(4, 4, -10, 10);
+      // PrintArrayDouble(array);
