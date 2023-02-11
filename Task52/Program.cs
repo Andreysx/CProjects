@@ -3,7 +3,7 @@
 // невозможно, программа должна вывести сообщение для
 // пользователя.
 
-void IncorrectValue()
+void IncorrectValue()//метод проверяет корректность введенных данных
 {
     Console.WriteLine("Введено некорректное значение.");
     Environment.Exit(0);
@@ -11,7 +11,7 @@ void IncorrectValue()
 
 int UserInput()
 {
-    if (!int.TryParse(Console.ReadLine(), out int temp)) IncorrectValue();
+    if (!int.TryParse(Console.ReadLine(), out int temp)) IncorrectValue(); //метод считывает введенные данные пользователем
     return temp;
 }
 
