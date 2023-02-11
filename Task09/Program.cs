@@ -18,7 +18,7 @@ Console.WriteLine($"Случайное число из отрезка 10 - 99-> 
 //( (?)если выполняется условие first возвращаем иначе(:) second ) тоже решение задачи 9
 //Console.WriteLine($"Наибольшая цифра числа -> {result}");
 
-//int result = firstDigit > secondDigit ? firstDigit : secondDigit; //тернарный оператор тоже решение задачи 9
+//int result = firstDigit > secondDigit ? firstDigit : secondDigit; //тернарный оператор тоже решение задачи 9 сокращение конструкции if -then-else
 //Console.WriteLine($"Наибольшая цифра числа -> {result}");
 
 int maxDigit = MaxDigit(number);// метож MaxDigit возвращает значение в переменную maxDigit (исходные данные=> numder)
@@ -32,6 +32,11 @@ int MaxDigit(int num)// к примеру num=number или num = 51 или num 
     int firstDigit = num / 10; //7
     int secondDigit = num % 10;//8
     int result = firstDigit > secondDigit ? firstDigit : secondDigit;
+    //if(firstDigit > secondDigit)
+    //int result = firstDigit;
+    //else
+    //int result = secondDigit;
+    // переменная = условие? выражение1:выражение2;
     return result;
 
 }
