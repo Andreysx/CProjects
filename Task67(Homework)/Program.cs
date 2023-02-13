@@ -9,7 +9,7 @@ Console.Write("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number > 0)
 {
-    Console.Write($"N = {number}-> \"");//\n перенос строки      \-
+    Console.Write($"N = {number} -> \"");//\n перенос строки      \-
     NaturalNumber(number);
     Console.Write($"\"");
 
