@@ -28,3 +28,13 @@ int AkkermanFunction(int num1, int num2)
         return AkkermanFunction(num1, num2);
 
 }
+
+// int AkkermanFunction(int num1, int num2) более оптимизированное решение
+// {
+//     if (num1 == 0)
+//         return num2 + 1;
+//     else if (num1 > 0 && num2 == 0)
+//         return AkkermanFunction(num1 - 1, 1);
+//         return AkkermanFunction(num1 - 1, AkkermanFunction(num1, num2 - 1));
+//    
+// }
